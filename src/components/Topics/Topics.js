@@ -1,14 +1,20 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
+import Topic from '../Topic/Topic';
 
 const Topics = () => {
-    const topics = useLoaderData();
-    console.log(topics.data);
+    const data = useLoaderData();
+    const topics = data.data;
+
     return (
         <div>
             <h1>Welcome to Quiz Central!!!</h1>
-            <p>Topics: {topics.data.length}</p>
-
+            <p>Topics: {topics.length}</p>
+            {
+                topics.map(topic => <Topic
+                    key={topic.id}
+                    topic={topic}></Topic>)
+            }
         </div>
     );
 };
