@@ -12,7 +12,7 @@ function Header() {
                 <Navbar.Brand href="#home" className='position-relative'>Quiz Central</Navbar.Brand>
                 <Nav className="me-auto position-absolute end-0 pe-5">
 
-                    <Nav.Link as={Link} to='/'>Home</Nav.Link>
+
                     <Nav.Link as={Link} to='/topics'>Topics</Nav.Link>
                     <Nav.Link as={Link} to='/statistics'>Statistics</Nav.Link>
                     <Nav.Link as={Link} to='/blog'>Blog</Nav.Link>

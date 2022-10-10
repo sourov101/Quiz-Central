@@ -1,4 +1,5 @@
 import React from 'react';
+import { Outlet } from 'react-router-dom';
 import Header from '../Navbar/Navbar';
 
 
@@ -7,6 +8,7 @@ const Main = () => {
     return (
         <div>
             <Header></Header>
+            <Outlet></Outlet>
         </div>
     );
 };

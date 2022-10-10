@@ -5,11 +5,20 @@ import {
   createBrowserRouter,
   RouterProvider,
 } from "react-router-dom";
+import Topics from './components/Topics/Topics';
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main />,
+    element: <Main></Main>,
+    children: [
+
+      {
+        path: '/topics',
+        element: <Topics></Topics>
+      }
+
+    ],
 
   },
 ]);
