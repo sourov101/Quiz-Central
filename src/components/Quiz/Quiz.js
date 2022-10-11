@@ -8,9 +8,9 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = ({ quiz }) => {
 
-    console.log(quiz)
+
     const seeCorrect = () => {
-        toast(`${quiz.correctAnswer}`, {
+        toast.info(`${quiz.correctAnswer}`, {
             position: toast.POSITION.TOP_RIGHT
         });
     }
