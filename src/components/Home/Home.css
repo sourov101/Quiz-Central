@@ -24,6 +24,11 @@
     .header img {
         display: none;
     }
+
+    .topics {
+        margin-left: 20px;
+
+    }
 }
 
 

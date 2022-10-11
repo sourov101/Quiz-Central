@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
-import { LineChart, Line, XAxis, YAxis, Tooltip, } from 'recharts';
+import { LineChart, Line, XAxis, YAxis, Tooltip, CartesianGrid } from 'recharts';
 import './statistic.css';
 const Statistic = () => {
     const info = useLoaderData();
@@ -21,6 +21,7 @@ const Statistic = () => {
                         bottom: 5,
                     }}
                 >
+                    <CartesianGrid strokeDasharray="3 3" />
                     <XAxis dataKey="name" />
                     <YAxis />
                     <Tooltip />
