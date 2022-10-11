@@ -9,11 +9,12 @@ const Home = () => {
     return (
         <div >
 
-            <div className='d-flex header justify-content-around align-items-center mb-5'>
+            <div className='d-flex header justify-content-around align-items-center mb-5 shadow '>
                 <img src='quiz.jpg' alt=''></img>
                 <div>
-                    <h1>Welcome to Quiz Central!!!</h1>
+                    <h1>Take your Quiz</h1>
                     <h3>Quiz On Topics: {topics.length}</h3>
+                    <p>You can take quiz on JS, Git, React and CSS </p>
                 </div>
             </div>
             <div className='topics mt-5'>

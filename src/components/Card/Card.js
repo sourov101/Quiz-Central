@@ -1,8 +1,10 @@
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import { Link } from 'react-router-dom';
 
 function Cards({ topic }) {
-    const { name, logo, total } = topic;
+    const { id, name, logo, total } = topic;
+
     return (
         <Card style={{ width: '18rem' }}>
             <Card.Img variant="top img-fluid" src={logo} />
@@ -11,7 +13,7 @@ function Cards({ topic }) {
                 <Card.Text>
                     Total Elements: {total}
                 </Card.Text>
-                <Button variant="primary">Quiz Practice</Button>
+                <Link to={`/home/${id}`}><Button variant="primary">Quiz Practice</Button></Link>
             </Card.Body>
         </Card>
     );
