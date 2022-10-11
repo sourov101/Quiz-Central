@@ -3,16 +3,29 @@ import Card from 'react-bootstrap/Card';
 import Options from '../Options/Options';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEye } from '@fortawesome/free-solid-svg-icons';
-
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Quiz = ({ quiz }) => {
-    if (quiz.Options === quiz.correctAnswer) {
 
-    }
+    console.log(quiz)
     const seeCorrect = () => {
-        alert(quiz.correctAnswer)
+        toast(`${quiz.correctAnswer}`, {
+            position: toast.POSITION.TOP_RIGHT
+        });
     }
-
+    const radioButton = (option) => {
+        if (option === quiz.correctAnswer) {
+            toast.success('Correct Answer !', {
+                position: toast.POSITION.TOP_RIGHT
+            });
+        }
+        else {
+            toast.error('Incorrect Answer !', {
+                position: toast.POSITION.TOP_RIGHT
+            });
+        }
+    }
 
     return (
         <div>
@@ -23,14 +36,15 @@ const Quiz = ({ quiz }) => {
                         <Card.Title>{quiz.question}</Card.Title>
 
                         {
-                            quiz.options.map((option, idx) => <Options key={idx} option={option}></Options>)
+                            quiz.options.map((option, idx) => <Options key={idx} option={option}
+                                radioButton={radioButton}></Options>)
                         }
 
                     </Card.Body>
                 </Card>
             </div>
 
-
+            <ToastContainer />
         </div>
     );
 };
