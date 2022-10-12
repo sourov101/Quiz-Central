@@ -19,11 +19,14 @@ const Quiz = ({ quiz }) => {
             toast.success('Correct Answer !', {
                 position: toast.POSITION.TOP_RIGHT
             });
+
+
         }
         else {
             toast.error('Incorrect Answer !', {
                 position: toast.POSITION.TOP_RIGHT
             });
+
         }
     }
 
@@ -37,7 +40,8 @@ const Quiz = ({ quiz }) => {
 
                         {
                             quiz.options.map((option, idx) => <Options key={idx} option={option}
-                                radioButton={radioButton}></Options>)
+                                radioButton={radioButton}
+                            ></Options>)
                         }
 
                     </Card.Body>

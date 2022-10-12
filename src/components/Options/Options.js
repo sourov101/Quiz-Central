@@ -5,7 +5,8 @@ const Options = ({ option, radioButton }) => {
 
     return (
         <div>
-            <Forms option={option} radioButton={radioButton}></Forms>
+            <Forms option={option} radioButton={radioButton}
+            ></Forms>
         </div>
     );
 };
